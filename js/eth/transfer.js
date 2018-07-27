@@ -8,12 +8,12 @@ const main = async () => {
 		const count = await web3.eth.getTransactionCount(config.accounts[0]);
 		const nonce = web3.utils.toHex(count);
 
-		const txValue = web3.utils.toHex(web3.utils.toWei(process.argv[2] || '0.035', 'ether'));
+		const txValue = web3.utils.toHex(web3.utils.toWei(process.argv[2] || '0.015', 'ether'));
 		const gasPrice = await web3.eth.getGasPrice();
-		const txData = web3.utils.asciiToHex('Does this work?');
+		const txData = null; //web3.utils.toHex('Diacritics test: Răzvan');
 
 		const from = web3.utils.toChecksumAddress(config.accounts[0]);
-		const to = web3.utils.toChecksumAddress(config.accounts[1]);
+		const to = web3.utils.toChecksumAddress(process.argv[3] || config.accounts[1]);
 		const rawTx = {
 			nonce: nonce,
 			from: from,
@@ -21,7 +21,7 @@ const main = async () => {
 			value: txValue,
 			gasLimit: '0x30D40', // 54,000
 			gasPrice: '0x2CB417800', // 12 gwei
-			data: txData
+			data: config.host.includes('localhost') === false ? txData : null
 		};
 
 		const privateKey = Buffer.from(config.private, 'hex');

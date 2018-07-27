@@ -32,8 +32,8 @@ const main = async () => {
 		const receipt = await web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'));
 		console.log(`Receipt info:  ${JSON.stringify(receipt, null, '\t')}`);
 
-		console.log(`From\'s balance after transfer: ${await contract.methods.balanceOf(config.accounts[0]).call()}`);
-		console.log(`To\'s balance after transfer: ${await contract.methods.balanceOf(config.accounts[1]).call()}`);
+		console.log(`From\'s balance after transfer: ${await contract.methods.balanceOf(from).call()}`);
+		console.log(`To\'s balance after transfer: ${await contract.methods.balanceOf(to).call()}`);
 	} catch (err) {
 		console.log(err);
 	}

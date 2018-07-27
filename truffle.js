@@ -11,10 +11,10 @@ module.exports = {
 		development: {
 			host: '127.0.0.1',
 			port: 7545,
-			network_id: 5777
+			network_id: 3
 		},
 		ropsten: {
-			provider: new HDWalletProvider(mnemonic, provider),
+			provider: () => { return new HDWalletProvider(mnemonic, provider) },
 			network_id: 3,
 			gas: 4600000
 		}
