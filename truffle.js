@@ -17,8 +17,7 @@ module.exports = {
 		ropsten: {
 			provider: () => { return new HDWalletProvider(mnemonic, provider) },
 			network_id: 3,
-			gas: 4600000,
-			from: '0x98c0047400dA37d278E76e78c6F60A7882Ae064d'
+			gas: 4600000
 		}
 	}
 };

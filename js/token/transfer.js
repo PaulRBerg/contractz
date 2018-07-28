@@ -1,7 +1,7 @@
 const Tx = require('ethereumjs-tx');
 
 const config = require('../config');
-const contract = require('../contract');
+const contract = require('../contract')('PaulCoin', config.contracts[0]);
 const web3 = require('../web3');
 
 const main = async () => {
