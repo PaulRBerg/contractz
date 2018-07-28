@@ -36,7 +36,7 @@ const infura = {
 	],
 	contracts: [
 		'0xEDC414FF0b200aE645387C1EF1654b8a2151Ec5c',
-		'0xc8CFD148D358e79712C019d7a4d33Cb805800f63'
+		'0xB8292515eBa73A8D4ba7062977D6FCC13D96E193'
 	],
 	host: 'https://ropsten.infura.io/' + process.env.INFURA_API_KEY,
 	private: process.env.INFURA_PRIVATE_KEY

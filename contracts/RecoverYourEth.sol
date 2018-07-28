@@ -6,7 +6,6 @@ contract RecoverYourEth {
 
     event LogReceivedFunds(address sender, uint amount);
     event LogReturnedFunds(address recipient, uint amount);
-    event LogReturnedFundsError(address recipient, uint amount);
 
     constructor() public {
         owner = msg.sender;
@@ -18,7 +17,6 @@ contract RecoverYourEth {
 
     modifier onlyOwner() {
         require(msg.sender == owner);
-        emit LogReturnedFundsError(msg.sender, address(this).balance);
         _;
     }
 
