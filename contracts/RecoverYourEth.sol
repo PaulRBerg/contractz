@@ -26,7 +26,11 @@ contract RecoverYourEth {
 
     function refundBalance() public onlyOwner {
         uint256 balance = address(this).balance;
+        msg.sender.transfer(balance);
         emit LogReturnedFunds(msg.sender, balance);
-        owner.transfer(balance);
+    }
+
+    function kill() public onlyOwner {
+        selfdestruct(owner);
     }
 }

@@ -10,7 +10,7 @@ const main = async () => {
 
 		const txValue = web3.utils.toHex(web3.utils.toWei(process.argv[2] || '0.015', 'ether'));
 		const gasPrice = await web3.eth.getGasPrice();
-		const txData = null; //web3.utils.toHex('Diacritics test: Răzvan');
+		const txData = null; //web3.utils.toHex('YOUR_AWESOME_DATA');
 
 		const from = web3.utils.toChecksumAddress(config.accounts[0]);
 		const to = web3.utils.toChecksumAddress(process.argv[3] || config.accounts[1]);
