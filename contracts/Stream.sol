@@ -1,13 +1,8 @@
 pragma solidity ^0.4.24;
 
-contract Stream {
+contract Modular {
 
-    address public payer;
-    address public payee;
-    uint256 public start_time;
-    uint256 public price_per_unit;
-
-    event LogReceivedFunds(address sender, uint256 amount);
+    bool public active = false;
 
     modifier onlyPayer() {
         require(msg.sender == payer);
@@ -19,24 +14,55 @@ contract Stream {
         _;
     }
 
-    constructor(address _payer, address _payee, uint256 _start_time, uint256 _price_per_unit) public {
-        payer = _payer;
-        payee = _payee;
-        start_time = _start_time;
-        price_per_unit = _price_per_unit;
+    modifier isNotStarted() {
+        require(active == false);
+        _;
     }
 
-    function approve() public onlyInvolvedParties {
-        uint256 current_time = 1000;
-        uint256 funds = (current_time - start_time) * price_per_unit;
-        payee.transfer(funds);
+    modifier isNotEnded() {
+        require(active == true);
+        _;
     }
 
     function kill() public onlyPayer {
         selfdestruct(payer);
     }
+}
 
-    function() payable {
-        emit LogReceivedFunds(msg.sender, msg.value);
+contract Stream is Modular {
+
+    address public payer;
+    address public payee;
+
+    uint256 public startTime;
+    uint256 public pricePerUnit;
+
+    event StreamStarted(address payer, address payee, uint256 pricePerUnit);
+    event StreamEnd(address payer, address payee, uint256 funds);
+
+    constructor(address _payer, address _payee) public {
+        payer = _payer;
+        payee = _payee;
+    }
+
+    // View
+    function getCurrentBilling() public view returns (uint256) {
+        uint256 endTime = 372001; // current block
+        return (endTime - startTime) * pricePerUnit;
+    }
+
+    // State
+    function start(uint256 pricePerUnit) public isNotStarted {
+        startTime = 372000; // current block
+        active = true;
+        emit StreamStarted(payer, payee, startTime, pricePerUnit);
+    }
+
+    function end() public isNotEnded onlyPayer {
+        uint256 endTime = 372001; // current block
+        uint256 funds = (endTime - startTime) * pricePerUnit;
+        payee.transfer(funds);
+        active = false;
+        emit StreamStarted(payer, payee, funds);
     }
 }

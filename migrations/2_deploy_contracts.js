@@ -1,7 +1,7 @@
-let PaulCoin = artifacts.require("./PaulCoin.sol");
-let Escrow = artifacts.require("./Escrow.sol");
+const PaulCoin = artifacts.require("./PaulCoin.sol");
+const Escrow = artifacts.require("./Escrow.sol");
 
-module.exports = function(deployer) {
+module.exports = (deployer) => {
 	deployer.deploy(PaulCoin);
 	deployer.deploy(Escrow);
 };

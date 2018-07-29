@@ -1,23 +1,41 @@
 pragma solidity ^0.4.24;
 
-contract Escrow {
+contract Ownable {
 
     address public owner;
-
-    event LogReceivedFunds(address sender, uint amount);
-    event LogReturnedFunds(address recipient, uint amount);
 
     constructor() public {
         owner = msg.sender;
     }
 
-    function() public payable {
-        emit LogReceivedFunds(msg.sender, msg.value);
-    }
-
     modifier onlyOwner() {
         require(msg.sender == owner);
         _;
+    }
+}
+
+contract Destructible is Ownable {
+
+    constructor() public payable { }
+
+    function destroy() onlyOwner public {
+        selfdestruct(owner);
+    }
+
+    function destroyAndSend(address _recipient) onlyOwner public {
+        selfdestruct(_recipient);
+    }
+}
+
+contract Escrow is Destructible {
+
+    event LogReceivedFunds(address sender, uint amount);
+    event LogReturnedFunds(address recipient, uint amount);
+
+    constructor() public { }
+
+    function() public payable {
+        emit LogReceivedFunds(msg.sender, msg.value);
     }
 
     function getBalance() public view returns (uint256) {
@@ -28,9 +46,5 @@ contract Escrow {
         uint256 balance = address(this).balance;
         msg.sender.transfer(balance);
         emit LogReturnedFunds(msg.sender, balance);
-    }
-
-    function kill() public onlyOwner {
-        selfdestruct(owner);
     }
 }
