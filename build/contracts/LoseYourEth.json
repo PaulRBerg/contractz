@@ -27,24 +27,24 @@
       "type": "fallback"
     }
   ],
-  "bytecode": "0x6080604052348015600f57600080fd5b506049600081905550609b806100266000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680637128a9a0146041575b005b348015604c57600080fd5b5060536069565b6040518082815260200191505060405180910390f35b600054815600a165627a7a72305820d83b929683a11c62a75852f3bf2d64cccb4cbb413ec5fca0fc601617c247ac500029",
-  "deployedBytecode": "0x608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680637128a9a0146041575b005b348015604c57600080fd5b5060536069565b6040518082815260200191505060405180910390f35b600054815600a165627a7a72305820d83b929683a11c62a75852f3bf2d64cccb4cbb413ec5fca0fc601617c247ac500029",
+  "bytecode": "0x6080604052348015600f57600080fd5b506049600081905550609b806100266000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680637128a9a0146041575b005b348015604c57600080fd5b5060536069565b6040518082815260200191505060405180910390f35b600054815600a165627a7a72305820b938e852297b75d961f894e59f436aa20100f9a974f4e1b6236a3ac2085523fd0029",
+  "deployedBytecode": "0x608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680637128a9a0146041575b005b348015604c57600080fd5b5060536069565b6040518082815260200191505060405180910390f35b600054815600a165627a7a72305820b938e852297b75d961f894e59f436aa20100f9a974f4e1b6236a3ac2085523fd0029",
   "sourceMap": "26:153:1:-;;;88:55;8:9:-1;5:2;;;30:1;27;20:12;5:2;88:55:1;134:2;119:12;:17;;;;26:153;;;;;;",
   "deployedSourceMap": "26:153:1:-;;;;;;;;;;;;;;;;;;;;;;54:27;;8:9:-1;5:2;;;30:1;27;20:12;5:2;54:27:1;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
   "source": "pragma solidity ^0.4.24;\n\ncontract LoseYourEth {\n\n    uint256 public redundantInt;\n\n    constructor() public {\n        redundantInt = 73;\n    }\n\n    function() public payable {}\n}",
-  "sourcePath": "/Users/paulrberg/Documents/DLT/eth/truffle/paulcoin/contracts/LoseYourEth.sol",
+  "sourcePath": "/Users/paulrberg/Documents/DLT/eth/contractz/contracts/LoseYourEth.sol",
   "ast": {
-    "absolutePath": "/Users/paulrberg/Documents/DLT/eth/truffle/paulcoin/contracts/LoseYourEth.sol",
+    "absolutePath": "/Users/paulrberg/Documents/DLT/eth/contractz/contracts/LoseYourEth.sol",
     "exportedSymbols": {
       "LoseYourEth": [
-        112
+        138
       ]
     },
-    "id": 113,
+    "id": 139,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 97,
+        "id": 123,
         "literals": [
           "solidity",
           "^",
@@ -60,19 +60,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 112,
+        "id": 138,
         "linearizedBaseContracts": [
-          112
+          138
         ],
         "name": "LoseYourEth",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 99,
+            "id": 125,
             "name": "redundantInt",
             "nodeType": "VariableDeclaration",
-            "scope": 112,
+            "scope": 138,
             "src": "54:27:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -81,7 +81,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 98,
+              "id": 124,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "54:7:1",
@@ -95,25 +95,25 @@
           },
           {
             "body": {
-              "id": 106,
+              "id": 132,
               "nodeType": "Block",
               "src": "109:34:1",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 104,
+                    "id": 130,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 102,
+                      "id": 128,
                       "name": "redundantInt",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 99,
+                      "referencedDeclaration": 125,
                       "src": "119:12:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -125,7 +125,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "3733",
-                      "id": 103,
+                      "id": 129,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -146,14 +146,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 105,
+                  "id": 131,
                   "nodeType": "ExpressionStatement",
                   "src": "119:17:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 107,
+            "id": 133,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -161,19 +161,19 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 100,
+              "id": 126,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "99:2:1"
             },
             "payable": false,
             "returnParameters": {
-              "id": 101,
+              "id": 127,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "109:0:1"
             },
-            "scope": 112,
+            "scope": 138,
             "src": "88:55:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -181,13 +181,13 @@
           },
           {
             "body": {
-              "id": 110,
+              "id": 136,
               "nodeType": "Block",
               "src": "175:2:1",
               "statements": []
             },
             "documentation": null,
-            "id": 111,
+            "id": 137,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -195,43 +195,43 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 108,
+              "id": 134,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "157:2:1"
             },
             "payable": true,
             "returnParameters": {
-              "id": 109,
+              "id": 135,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "175:0:1"
             },
-            "scope": 112,
+            "scope": 138,
             "src": "149:28:1",
             "stateMutability": "payable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 113,
+        "scope": 139,
         "src": "26:153:1"
       }
     ],
     "src": "0:179:1"
   },
   "legacyAST": {
-    "absolutePath": "/Users/paulrberg/Documents/DLT/eth/truffle/paulcoin/contracts/LoseYourEth.sol",
+    "absolutePath": "/Users/paulrberg/Documents/DLT/eth/contractz/contracts/LoseYourEth.sol",
     "exportedSymbols": {
       "LoseYourEth": [
-        112
+        138
       ]
     },
-    "id": 113,
+    "id": 139,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 97,
+        "id": 123,
         "literals": [
           "solidity",
           "^",
@@ -247,19 +247,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 112,
+        "id": 138,
         "linearizedBaseContracts": [
-          112
+          138
         ],
         "name": "LoseYourEth",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 99,
+            "id": 125,
             "name": "redundantInt",
             "nodeType": "VariableDeclaration",
-            "scope": 112,
+            "scope": 138,
             "src": "54:27:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -268,7 +268,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 98,
+              "id": 124,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "54:7:1",
@@ -282,25 +282,25 @@
           },
           {
             "body": {
-              "id": 106,
+              "id": 132,
               "nodeType": "Block",
               "src": "109:34:1",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 104,
+                    "id": 130,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 102,
+                      "id": 128,
                       "name": "redundantInt",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 99,
+                      "referencedDeclaration": 125,
                       "src": "119:12:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -312,7 +312,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "3733",
-                      "id": 103,
+                      "id": 129,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -333,14 +333,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 105,
+                  "id": 131,
                   "nodeType": "ExpressionStatement",
                   "src": "119:17:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 107,
+            "id": 133,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -348,19 +348,19 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 100,
+              "id": 126,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "99:2:1"
             },
             "payable": false,
             "returnParameters": {
-              "id": 101,
+              "id": 127,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "109:0:1"
             },
-            "scope": 112,
+            "scope": 138,
             "src": "88:55:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -368,13 +368,13 @@
           },
           {
             "body": {
-              "id": 110,
+              "id": 136,
               "nodeType": "Block",
               "src": "175:2:1",
               "statements": []
             },
             "documentation": null,
-            "id": 111,
+            "id": 137,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -382,26 +382,26 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 108,
+              "id": 134,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "157:2:1"
             },
             "payable": true,
             "returnParameters": {
-              "id": 109,
+              "id": 135,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "175:0:1"
             },
-            "scope": 112,
+            "scope": 138,
             "src": "149:28:1",
             "stateMutability": "payable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 113,
+        "scope": 139,
         "src": "26:153:1"
       }
     ],
@@ -413,5 +413,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-07-28T22:00:07.946Z"
+  "updatedAt": "2018-07-29T10:38:10.982Z"
 }

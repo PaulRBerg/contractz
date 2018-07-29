@@ -1,2 +1,2 @@
-## PaulCoin
-Paul Berg's personal token on Ethereum.
+## Contractz
+Paul Berg's Ethereum contracts.
