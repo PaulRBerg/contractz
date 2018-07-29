@@ -13,7 +13,7 @@ module.exports = async (from, to, value = '0x0', gasLimit = '0x30D40', gasPrice 
 	const rawTx = {
 		nonce: nonce,
 		from: from,
-		to: to, // remember that the `to` param is the contract when you send a token
+		to: to, // remember that the `to` param is the contract when you append data
 		value: value,
 		gasLimit: gasLimit, // 0x30D40 is 54,000
 		gasPrice: gasPrice, // 0x2CB417800 is 12 gwei

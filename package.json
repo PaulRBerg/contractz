@@ -1,14 +1,13 @@
 {
-  "name": "paulcoin",
+  "name": "contractz",
   "version": "0.1.0",
-  "description": "Paul Berg's personal coin",
+  "description": "Paul Berg's Ethereum contracts",
   "keywords": [
-    "token",
-    "smart contracts",
-    "modules",
     "ethereum",
-    "eos",
-    "neo"
+    "contracts",
+    "smart contracts",
+    "tokens",
+    "dapp"
   ],
   "author": "Paul Berg",
   "license": "ISC",
@@ -18,5 +17,8 @@
     "openzeppelin-solidity": "1.11.0",
     "truffle-hdwallet-provider": "0.0.5",
     "web3": "^1.0.0-beta.35"
+  },
+  "devDependencies": {
+    "eslint": "^5.2.0"
   }
 }
