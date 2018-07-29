@@ -44,4 +44,4 @@ const infura = {
 // 	private: "ec8f4f5c599e912dd4956e72c1b6309703f8c0712006d1bc0a5f40b837aad36d"
 // };
 
-module.exports = ganache;
+module.exports = infura;

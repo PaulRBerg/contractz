@@ -43,6 +43,7 @@ contract Stream {
     // View
     function getCurrentBilling() public view returns (uint256) {
         uint256 endBlock = block.number;
+        require(endBlock >= startBlock);
         return (endBlock - startBlock) * pricePerUnit;
     }
 
