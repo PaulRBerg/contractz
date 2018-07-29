@@ -18,14 +18,14 @@
     "absolutePath": "/Users/paulrberg/Documents/DLT/eth/truffle/paulcoin/contracts/Stream.sol",
     "exportedSymbols": {
       "Stream": [
-        211
+        237
       ]
     },
-    "id": 212,
+    "id": 238,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 206,
+        "id": 232,
         "literals": [
           "solidity",
           "^",
@@ -41,22 +41,22 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 211,
+        "id": 237,
         "linearizedBaseContracts": [
-          211
+          237
         ],
         "name": "Stream",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 209,
+              "id": 235,
               "nodeType": "Block",
               "src": "70:8:4",
               "statements": []
             },
             "documentation": null,
-            "id": 210,
+            "id": 236,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -64,26 +64,26 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 207,
+              "id": 233,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "60:2:4"
             },
             "payable": false,
             "returnParameters": {
-              "id": 208,
+              "id": 234,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "70:0:4"
             },
-            "scope": 211,
+            "scope": 237,
             "src": "49:29:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 212,
+        "scope": 238,
         "src": "26:54:4"
       }
     ],
@@ -93,14 +93,14 @@
     "absolutePath": "/Users/paulrberg/Documents/DLT/eth/truffle/paulcoin/contracts/Stream.sol",
     "exportedSymbols": {
       "Stream": [
-        211
+        237
       ]
     },
-    "id": 212,
+    "id": 238,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 206,
+        "id": 232,
         "literals": [
           "solidity",
           "^",
@@ -116,22 +116,22 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 211,
+        "id": 237,
         "linearizedBaseContracts": [
-          211
+          237
         ],
         "name": "Stream",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 209,
+              "id": 235,
               "nodeType": "Block",
               "src": "70:8:4",
               "statements": []
             },
             "documentation": null,
-            "id": 210,
+            "id": 236,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -139,26 +139,26 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 207,
+              "id": 233,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "60:2:4"
             },
             "payable": false,
             "returnParameters": {
-              "id": 208,
+              "id": 234,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "70:0:4"
             },
-            "scope": 211,
+            "scope": 237,
             "src": "49:29:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 212,
+        "scope": 238,
         "src": "26:54:4"
       }
     ],
@@ -170,5 +170,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-07-28T15:28:59.882Z"
+  "updatedAt": "2018-07-28T22:00:07.947Z"
 }
