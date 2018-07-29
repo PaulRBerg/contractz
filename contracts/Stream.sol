@@ -7,15 +7,15 @@ contract Stream {
 
     bool public active = false;
 
-    uint256 public startTime;
-    //uint256 public endTime;
+    uint256 public startBlock;
+//    uint256 public endBlock;
     uint256 public pricePerUnit;
 
     event StreamStarted(address payer, address payee, uint256 pricePerUnit);
     event StreamEnd(address payer, address payee, uint256 funds);
 
-    constructor(address _payer, address _payee) public {
-        payer = _payer;
+    constructor(address _payee) public {
+        payer = msg.sender;
         payee = _payee;
     }
 
@@ -30,33 +30,33 @@ contract Stream {
         _;
     }
 
+    modifier isStarted() {
+        require(active == true);
+        _;
+    }
+
     modifier isNotStarted() {
         require(active == false);
         _;
     }
 
-    modifier isNotEnded() {
-        require(active == true);
-        _;
-    }
-
     // View
     function getCurrentBilling() public view returns (uint256) {
-        uint256 endTime = 372001; // current block
-        return (endTime - startTime) * pricePerUnit;
+        uint256 endBlock = block.number;
+        return (endBlock - startBlock) * pricePerUnit;
     }
 
     // State
-    function start(uint256 _pricePerUnit) public isNotStarted {
-        startTime = 372000; // current block
+    function start(uint256 _pricePerUnit) public isNotStarted onlyPayer {
         pricePerUnit = _pricePerUnit;
+        startBlock = block.number;
         active = true;
         emit StreamStarted(payer, payee, pricePerUnit);
     }
 
-    function end() public isNotEnded onlyPayer {
-        uint256 endTime = 372001; // current block
-        uint256 funds = (endTime - startTime) * pricePerUnit;
+    function end() public isStarted {
+        uint256 endBlock = block.number;
+        uint256 funds = (endBlock - startBlock) * pricePerUnit;
         payee.transfer(funds);
         active = false;
         emit StreamStarted(payer, payee, funds);

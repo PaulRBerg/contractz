@@ -377,7 +377,7 @@
         "id": 198,
         "nodeType": "ImportDirective",
         "scope": 263,
-        "sourceUnit": 626,
+        "sourceUnit": 628,
         "src": "26:63:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -388,7 +388,7 @@
         "id": 199,
         "nodeType": "ImportDirective",
         "scope": 263,
-        "sourceUnit": 1044,
+        "sourceUnit": 1046,
         "src": "90:71:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -402,10 +402,10 @@
               "id": 200,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 625,
+              "referencedDeclaration": 627,
               "src": "184:7:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$625",
+                "typeIdentifier": "t_contract$_Ownable_$627",
                 "typeString": "contract Ownable"
               }
             },
@@ -420,10 +420,10 @@
               "id": 202,
               "name": "StandardToken",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1043,
+              "referencedDeclaration": 1045,
               "src": "193:13:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_StandardToken_$1043",
+                "typeIdentifier": "t_contract$_StandardToken_$1045",
                 "typeString": "contract StandardToken"
               }
             },
@@ -433,11 +433,11 @@
           }
         ],
         "contractDependencies": [
-          625,
-          721,
-          764,
-          796,
-          1043
+          627,
+          723,
+          766,
+          798,
+          1045
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -445,11 +445,11 @@
         "id": 262,
         "linearizedBaseContracts": [
           262,
-          1043,
-          721,
-          764,
-          796,
-          625
+          1045,
+          723,
+          766,
+          798,
+          627
         ],
         "name": "PaulCoin",
         "nodeType": "ContractDefinition",
@@ -893,7 +893,7 @@
                         "name": "balances",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 638,
+                        "referencedDeclaration": 640,
                         "src": "480:8:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
@@ -907,7 +907,7 @@
                         "name": "owner",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 543,
+                        "referencedDeclaration": 545,
                         "src": "489:5:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1018,7 +1018,7 @@
                         "name": "owner",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 543,
+                        "referencedDeclaration": 545,
                         "src": "547:5:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1060,7 +1060,7 @@
                       "name": "Transfer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 795,
+                      "referencedDeclaration": 797,
                       "src": "524:8:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
@@ -1130,7 +1130,7 @@
                         "name": "owner",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 543,
+                        "referencedDeclaration": 545,
                         "src": "635:5:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1149,7 +1149,7 @@
                       "name": "selfdestruct",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1066,
+                      "referencedDeclaration": 1068,
                       "src": "622:12:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_selfdestruct_nonpayable$_t_address_$returns$__$",
@@ -1191,7 +1191,7 @@
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 573,
+                  "referencedDeclaration": 575,
                   "src": "602:9:3",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -1257,7 +1257,7 @@
         "id": 198,
         "nodeType": "ImportDirective",
         "scope": 263,
-        "sourceUnit": 626,
+        "sourceUnit": 628,
         "src": "26:63:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1268,7 +1268,7 @@
         "id": 199,
         "nodeType": "ImportDirective",
         "scope": 263,
-        "sourceUnit": 1044,
+        "sourceUnit": 1046,
         "src": "90:71:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1282,10 +1282,10 @@
               "id": 200,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 625,
+              "referencedDeclaration": 627,
               "src": "184:7:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$625",
+                "typeIdentifier": "t_contract$_Ownable_$627",
                 "typeString": "contract Ownable"
               }
             },
@@ -1300,10 +1300,10 @@
               "id": 202,
               "name": "StandardToken",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1043,
+              "referencedDeclaration": 1045,
               "src": "193:13:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_StandardToken_$1043",
+                "typeIdentifier": "t_contract$_StandardToken_$1045",
                 "typeString": "contract StandardToken"
               }
             },
@@ -1313,11 +1313,11 @@
           }
         ],
         "contractDependencies": [
-          625,
-          721,
-          764,
-          796,
-          1043
+          627,
+          723,
+          766,
+          798,
+          1045
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -1325,11 +1325,11 @@
         "id": 262,
         "linearizedBaseContracts": [
           262,
-          1043,
-          721,
-          764,
-          796,
-          625
+          1045,
+          723,
+          766,
+          798,
+          627
         ],
         "name": "PaulCoin",
         "nodeType": "ContractDefinition",
@@ -1773,7 +1773,7 @@
                         "name": "balances",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 638,
+                        "referencedDeclaration": 640,
                         "src": "480:8:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
@@ -1787,7 +1787,7 @@
                         "name": "owner",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 543,
+                        "referencedDeclaration": 545,
                         "src": "489:5:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1898,7 +1898,7 @@
                         "name": "owner",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 543,
+                        "referencedDeclaration": 545,
                         "src": "547:5:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1940,7 +1940,7 @@
                       "name": "Transfer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 795,
+                      "referencedDeclaration": 797,
                       "src": "524:8:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
@@ -2010,7 +2010,7 @@
                         "name": "owner",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 543,
+                        "referencedDeclaration": 545,
                         "src": "635:5:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -2029,7 +2029,7 @@
                       "name": "selfdestruct",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1066,
+                      "referencedDeclaration": 1068,
                       "src": "622:12:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_selfdestruct_nonpayable$_t_address_$returns$__$",
@@ -2071,7 +2071,7 @@
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 573,
+                  "referencedDeclaration": 575,
                   "src": "602:9:3",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -2123,5 +2123,5 @@
     }
   },
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-07-29T10:44:50.608Z"
+  "updatedAt": "2018-07-29T13:30:26.232Z"
 }

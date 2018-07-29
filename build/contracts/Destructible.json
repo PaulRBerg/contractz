@@ -1,15 +1,6 @@
 {
-  "contractName": "Escrow",
+  "contractName": "Destructible",
   "abi": [
-    {
-      "constant": false,
-      "inputs": [],
-      "name": "destroy",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
     {
       "constant": true,
       "inputs": [],
@@ -25,6 +16,21 @@
       "type": "function"
     },
     {
+      "inputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "constructor"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "destroy",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
       "constant": false,
       "inputs": [
         {
@@ -37,80 +43,12 @@
       "payable": false,
       "stateMutability": "nonpayable",
       "type": "function"
-    },
-    {
-      "inputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "constructor"
-    },
-    {
-      "payable": true,
-      "stateMutability": "payable",
-      "type": "fallback"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "name": "sender",
-          "type": "address"
-        },
-        {
-          "indexed": false,
-          "name": "amount",
-          "type": "uint256"
-        }
-      ],
-      "name": "LogReceivedFunds",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "name": "recipient",
-          "type": "address"
-        },
-        {
-          "indexed": false,
-          "name": "amount",
-          "type": "uint256"
-        }
-      ],
-      "name": "LogReturnedFunds",
-      "type": "event"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "getBalance",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [],
-      "name": "refundBalance",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
     }
   ],
-  "bytecode": "0x608060405234801561001057600080fd5b50336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550610472806100606000396000f30060806040526004361061006d576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806312065fe0146100da57806383197ef0146101055780638da5cb5b1461011c578063cf0deba914610173578063f5074f411461018a575b7f81d2c188629cc4a1c694d285150cb5fa3dde3157a2684460d3ac7a1e331f61643334604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019250505060405180910390a1005b3480156100e657600080fd5b506100ef6101cd565b6040518082815260200191505060405180910390f35b34801561011157600080fd5b5061011a6101ec565b005b34801561012857600080fd5b50610131610281565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561017f57600080fd5b506101886102a6565b005b34801561019657600080fd5b506101cb600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506103d2565b005b60003073ffffffffffffffffffffffffffffffffffffffff1631905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561024757600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16ff5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561030357600080fd5b3073ffffffffffffffffffffffffffffffffffffffff163190503373ffffffffffffffffffffffffffffffffffffffff166108fc829081150290604051600060405180830381858888f19350505050158015610363573d6000803e3d6000fd5b507fe0e5873eb9d996d2ab087b071a9a50522121c02b43308c8728c06739f52b3f873382604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019250505060405180910390a150565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561042d57600080fd5b8073ffffffffffffffffffffffffffffffffffffffff16ff00a165627a7a72305820df7fbe1fcce8c33ab2cdcfac721c9cdf0be045228108ad7e3c2ffa10af65656a0029",
-  "deployedBytecode": "0x60806040526004361061006d576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806312065fe0146100da57806383197ef0146101055780638da5cb5b1461011c578063cf0deba914610173578063f5074f411461018a575b7f81d2c188629cc4a1c694d285150cb5fa3dde3157a2684460d3ac7a1e331f61643334604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019250505060405180910390a1005b3480156100e657600080fd5b506100ef6101cd565b6040518082815260200191505060405180910390f35b34801561011157600080fd5b5061011a6101ec565b005b34801561012857600080fd5b50610131610281565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561017f57600080fd5b506101886102a6565b005b34801561019657600080fd5b506101cb600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506103d2565b005b60003073ffffffffffffffffffffffffffffffffffffffff1631905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561024757600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16ff5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561030357600080fd5b3073ffffffffffffffffffffffffffffffffffffffff163190503373ffffffffffffffffffffffffffffffffffffffff166108fc829081150290604051600060405180830381858888f19350505050158015610363573d6000803e3d6000fd5b507fe0e5873eb9d996d2ab087b071a9a50522121c02b43308c8728c06739f52b3f873382604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019250505060405180910390a150565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561042d57600080fd5b8073ffffffffffffffffffffffffffffffffffffffff16ff00a165627a7a72305820df7fbe1fcce8c33ab2cdcfac721c9cdf0be045228108ad7e3c2ffa10af65656a0029",
-  "sourceMap": "482:573:0:-;;;639:24;8:9:-1;5:2;;;30:1;27;20:12;5:2;639:24:0;116:10;108:5;;:18;;;;;;;;;;;;;;;;;;482:573;;;;;;",
-  "deployedSourceMap": "482:573:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;710:39;727:10;739:9;710:39;;;;;;;;;;;;;;;;;;;;;;;;;;;;482:573;762:97;;8:9:-1;5:2;;;30:1;27;20:12;5:2;762:97:0;;;;;;;;;;;;;;;;;;;;;;;298:72;;8:9:-1;5:2;;;30:1;27;20:12;5:2;298:72:0;;;;;;50:20;;8:9:-1;5:2;;;30:1;27;20:12;5:2;50:20:0;;;;;;;;;;;;;;;;;;;;;;;;;;;865:188;;8:9:-1;5:2;;;30:1;27;20:12;5:2;865:188:0;;;;;;376:102;;8:9:-1;5:2;;;30:1;27;20:12;5:2;376:102:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;762:97;805:7;839:4;831:21;;;824:28;;762:97;:::o;298:72::-;192:5;;;;;;;;;;;178:19;;:10;:19;;;170:28;;;;;;;;357:5;;;;;;;;;;;344:19;;;50:20;;;;;;;;;;;;;:::o;865:188::-;917:15;192:5;;;;;;;;;;;178:19;;:10;:19;;;170:28;;;;;;;;943:4;935:21;;;917:39;;966:10;:19;;:28;986:7;966:28;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;966:28:0;1009:37;1026:10;1038:7;1009:37;;;;;;;;;;;;;;;;;;;;;;;;;;;;865:188;:::o;376:102::-;192:5;;;;;;;;;;;178:19;;:10;:19;;;170:28;;;;;;;;460:10;447:24;;",
+  "bytecode": "0x6080604052336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550610267806100536000396000f300608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806383197ef01461005c5780638da5cb5b14610073578063f5074f41146100ca575b600080fd5b34801561006857600080fd5b5061007161010d565b005b34801561007f57600080fd5b506100886101a2565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156100d657600080fd5b5061010b600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506101c7565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561016857600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16ff5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561022257600080fd5b8073ffffffffffffffffffffffffffffffffffffffff16ff00a165627a7a7230582079d2f5121b40fc27d2421c39a4f6cac92b1f9a354ac873bf2da894112fe4f0150029",
+  "deployedBytecode": "0x608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806383197ef01461005c5780638da5cb5b14610073578063f5074f41146100ca575b600080fd5b34801561006857600080fd5b5061007161010d565b005b34801561007f57600080fd5b506100886101a2565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156100d657600080fd5b5061010b600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506101c7565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561016857600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16ff5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561022257600080fd5b8073ffffffffffffffffffffffffffffffffffffffff16ff00a165627a7a7230582079d2f5121b40fc27d2421c39a4f6cac92b1f9a354ac873bf2da894112fe4f0150029",
+  "sourceMap": "220:260:0:-;;;116:10;108:5;;:18;;;;;;;;;;;;;;;;;;220:260;;;;;;",
+  "deployedSourceMap": "220:260:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;298:72;;8:9:-1;5:2;;;30:1;27;20:12;5:2;298:72:0;;;;;;50:20;;8:9:-1;5:2;;;30:1;27;20:12;5:2;50:20:0;;;;;;;;;;;;;;;;;;;;;;;;;;;376:102;;8:9:-1;5:2;;;30:1;27;20:12;5:2;376:102:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;298:72;192:5;;;;;;;;;;;178:19;;:10;:19;;;170:28;;;;;;;;357:5;;;;;;;;;;;344:19;;;50:20;;;;;;;;;;;;;:::o;376:102::-;192:5;;;;;;;;;;;178:19;;:10;:19;;;170:28;;;;;;;;460:10;447:24;;",
   "source": "pragma solidity ^0.4.24;\n\ncontract Ownable {\n\n    address public owner;\n\n    constructor() public {\n        owner = msg.sender;\n    }\n\n    modifier onlyOwner() {\n        require(msg.sender == owner);\n        _;\n    }\n}\n\ncontract Destructible is Ownable {\n\n    constructor() public payable { }\n\n    function destroy() onlyOwner public {\n        selfdestruct(owner);\n    }\n\n    function destroyAndSend(address _recipient) onlyOwner public {\n        selfdestruct(_recipient);\n    }\n}\n\ncontract Escrow is Destructible {\n\n    event LogReceivedFunds(address sender, uint amount);\n    event LogReturnedFunds(address recipient, uint amount);\n\n    constructor() public { }\n\n    function() public payable {\n        emit LogReceivedFunds(msg.sender, msg.value);\n    }\n\n    function getBalance() public view returns (uint256) {\n        return address(this).balance;\n    }\n\n    function refundBalance() public onlyOwner {\n        uint256 balance = address(this).balance;\n        msg.sender.transfer(balance);\n        emit LogReturnedFunds(msg.sender, balance);\n    }\n}",
   "sourcePath": "/Users/paulrberg/Documents/DLT/eth/contractz/contracts/Escrow.sol",
   "ast": {
@@ -2989,14 +2927,7 @@
     "name": "solc",
     "version": "0.4.24+commit.e67f0147.Emscripten.clang"
   },
-  "networks": {
-    "3": {
-      "events": {},
-      "links": {},
-      "address": "0xa2930f550358ae92b258a88510adb3e1d5a6ae5e",
-      "transactionHash": "0xc410fc0d751a9fb3f836dbfe37356b12bf27ad5c8e7a345ca9a1ab2bd7b21436"
-    }
-  },
+  "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-07-29T13:30:26.230Z"
+  "updatedAt": "2018-07-29T13:30:26.228Z"
 }

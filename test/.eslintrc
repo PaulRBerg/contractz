@@ -1,0 +1,10 @@
+{
+  "globals": {
+    "artifacts": true,
+    "assert": true,
+    "beforeEach": true,
+    "contract": true,
+    "it": true,
+    "web3": true
+  }
+}

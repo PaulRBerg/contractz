@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 const config = require("../js/config");
 const Stream = artifacts.require("./Stream.sol");
 
