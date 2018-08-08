@@ -13,18 +13,18 @@ contract("PaulCoin", accounts => {
 		const totalSupply = await token.totalSupply();
 
 		assert.equal(owner, tokenOwner);
-		assert.equal(totalSupply.toNumber(), web3.utils.toWei("10000"));
+		assert.equal(totalSupply.toNumber(), web3.toWei("10000"));
 	});
 
 	it("allows token transfers", async function () {
 		const owner = accounts[0];
 		const recipient = accounts[1];
-		await token.transfer(recipient, web3.utils.toWei("100"), { from: owner });
+		await token.transfer(recipient, web3.toWei("100"), { from: owner });
 
 		const ownerBalance = await token.balanceOf(owner);
-		assert.equal(ownerBalance.toNumber(), web3.utils.toWei("9900"));
+		assert.equal(ownerBalance.toNumber(), web3.toWei("9900"));
 
 		const recipientBalance = await token.balanceOf(recipient);
-		assert.equal(recipientBalance.toNumber(), web3.utils.toWei("100"));
+		assert.equal(recipientBalance.toNumber(), web3.toWei("100"));
 	});
 });

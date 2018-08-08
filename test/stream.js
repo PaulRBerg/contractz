@@ -1,7 +1,7 @@
 const Stream = artifacts.require("Stream");
 
 contract("Stream", accounts => {
-	const payer = accounts[1], payee = accounts[2];
+	const payer = accounts[0], payee = accounts[1];
 	let stream = {};
 
 	beforeEach(async () => {
