@@ -9,7 +9,7 @@ contract Note {
         owner = msg.sender;
     }
 
-    function addValue(uint256 _value) {
+    function addValue(uint256 _value) public {
         value = _value;
     }
 

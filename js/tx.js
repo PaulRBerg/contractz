@@ -7,7 +7,7 @@ module.exports = async (from, to, value = "0x0", gasLimit = "0x30D40", gasPrice 
 	// assert(to, 'To needs to be valid');
 	// assert(data, 'Data needs to be valid');
 
-	const count = await web3.eth.getTransactionCount(config.accounts[0]);
+	const count = await web3.eth.getTransactionCount(from);
 	const nonce = web3.utils.toHex(count);
 
 	const rawTx = {

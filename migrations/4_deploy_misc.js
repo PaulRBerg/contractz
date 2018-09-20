@@ -1,5 +1,5 @@
-const Note = artifacts.require("./Note.sol");
+const ModifierTest = artifacts.require("./ModifierTest.sol");
 
 module.exports = (deployer) => {
-	deployer.deploy(Note);
+	deployer.deploy(ModifierTest);
 };

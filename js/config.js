@@ -29,7 +29,7 @@ const infura = {
 		"0xa2dc80a1e7de6ec5285c7af289c6e1e0efd4127e",
 		"0x1f1c18a3e029f29b7eee064b223fe23d25d643db"
 	],
-	host: "https://ropsten.infura.io/" + process.env.INFURA_API_KEY,
+	host: "https://rinkeby.infura.io/" + process.env.INFURA_API_KEY,
 	private: process.env.INFURA_PRIVATE_KEY
 };
 
