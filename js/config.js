@@ -19,6 +19,20 @@ const ganache = {
 	private: "ab030672f2f3da2d187f27e71a4b3564d98af64024340ba582a44e348f922817"
 };
 
+const geth = {
+	accounts: [
+		"0x98c0047400dA37d278E76e78c6F60A7882Ae064d",
+		"0x19149798f777a3D738777334CCBf0063a04fCA3b"
+	],
+	contracts: [
+		"0xdb9a535f8c43cb87b7c2a3019dc24a9b1edd6c31",
+		"0xa2dc80a1e7de6ec5285c7af289c6e1e0efd4127e",
+		"0x1f1c18a3e029f29b7eee064b223fe23d25d643db"
+	],
+	host: "http://localhost:8545",
+	private: process.env.INFURA_PRIVATE_KEY
+};
+
 const infura = {
 	accounts: [
 		"0x98c0047400dA37d278E76e78c6F60A7882Ae064d",
@@ -41,8 +55,8 @@ const cli = {
 	contracts: [
 		"0xb475b9ae0d4dde722e525da8dddf8c06e69c90f4"
 	],
-	host: "http://localhost:8545",
+	host: "http://localhost:9545",
 	private: "ec8f4f5c599e912dd4956e72c1b6309703f8c0712006d1bc0a5f40b837aad36d"
 };
 
-module.exports = ganache;
+module.exports = geth;
