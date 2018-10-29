@@ -43,20 +43,8 @@ const infura = {
 		"0xa2dc80a1e7de6ec5285c7af289c6e1e0efd4127e",
 		"0x1f1c18a3e029f29b7eee064b223fe23d25d643db"
 	],
-	host: "https://rinkeby.infura.io/" + process.env.INFURA_API_KEY,
+	host: "https://mainnet.infura.io/" + process.env.INFURA_API_KEY,
 	private: process.env.INFURA_PRIVATE_KEY
 };
 
-const cli = {
-	accounts: [
-		"0xfd78093e09d1f62d637b1c3906d1295ce5e6bf6a",
-		"0x2f2e437289cbb228e2004ac7c53027b6f22878ea"
-	],
-	contracts: [
-		"0xb475b9ae0d4dde722e525da8dddf8c06e69c90f4"
-	],
-	host: "http://localhost:9545",
-	private: "ec8f4f5c599e912dd4956e72c1b6309703f8c0712006d1bc0a5f40b837aad36d"
-};
-
-module.exports = geth;
+module.exports = infura;
