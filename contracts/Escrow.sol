@@ -44,7 +44,17 @@ contract Escrow is Destructible {
 
     function refundBalance() public onlyOwner {
         uint256 balance = address(this).balance;
-        msg.sender.transfer(balance);
         emit LogReturnedFunds(msg.sender, balance);
+        msg.sender.transfer(balance);
+    }
+
+    function refundNada() public {
+        msg.sender.transfer(0);
+    }
+
+    function refundNadaRedundant() public {
+        if (false) {
+            msg.sender.transfer(0);
+        }
     }
 }
