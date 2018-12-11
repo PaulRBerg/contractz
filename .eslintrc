@@ -1,18 +1,24 @@
 {
   "env": {
+    "browser": true,
+    "commonjs": true,
     "node": true,
     "es6": true
   },
   "extends": [
-    "eslint:recommended"
+    "eslint:recommended",
+    "plugin:react/recommended"
   ],
+  "parser": "babel-eslint",
   "parserOptions": {
-    "ecmaVersion": 8,
-    "ecmaFeatures": {
-      "experimentalObjectRestSpread": true
-    },
+    "allowImportExportEverywhere": true,
+    "ecmaVersion": 2018,
     "sourceType": "module"
   },
+  "plugins": [
+    "import",
+    "react"
+  ],
   "rules": {
     "indent": [
       "error",
@@ -22,14 +28,24 @@
       "error",
       "unix"
     ],
-    "no-console": "off",
+    "no-console": [
+      "off"
+    ],
     "quotes": [
       "error",
       "double"
+    ],
+    "react/prop-types": [
+    	"off"
     ],
     "semi": [
       "error",
       "always"
     ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }

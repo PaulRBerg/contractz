@@ -14,20 +14,24 @@ const testnet = (name, network_id, gas = 6999500) => {
 		gas: gas
 	};
 };
+
 module.exports = {
+	compilers: {
+		solc: {
+			optimizer: {
+				enabled: true,
+				runs: 200,
+			},
+			version: "0.4.25",
+		},
+	},
 	networks: {
-		development: {
+		local: {
 			host: "127.0.0.1",
-			port: 7545,
+			port: 8545,
 			network_id: 7923
 		},
 		kovan: testnet("kovan", 42),
 		rinkeby: testnet("rinkeby", 4),
-	},
-	solc: {
-		optimizer: {
-			enabled: true,
-			runs: 200
-		}
 	},
 };

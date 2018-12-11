@@ -1,7 +1,9 @@
 {
   "name": "contractz",
   "version": "0.1.0",
+  "author": "Paul Berg",
   "description": "Paul Berg's Ethereum contracts",
+  "license": "ISC",
   "keywords": [
     "ethereum",
     "contracts",
@@ -9,17 +11,18 @@
     "tokens",
     "dapp"
   ],
-  "author": "Paul Berg",
-  "license": "ISC",
   "dependencies": {
-    "dotenv": "^6.0.0",
+    "dotenv": "^6.2.0",
+    "eslint": "^5.10.0",
     "ethereum-input-data-decoder": "0.0.12",
     "openzeppelin-solidity": "2.0.0",
+    "truffle": "^5.0.0-beta.2",
     "truffle-hdwallet-provider": "^1.0.0-web3one.1",
-    "web3": "^1.0.0-beta.36",
-    "web3-utils": "^1.0.0-beta.36"
+    "web3": "^1.0.0-beta.37",
+    "web3-utils": "^1.0.0-beta.37"
   },
-  "devDependencies": {
-    "eslint": "^5.2.0"
+  "scripts": {
+    "lint": "eslint .",
+    "test": "./node_modules/.bin/truffle test"
   }
 }

@@ -20,7 +20,7 @@ const main = async () => {
 			to: to,
 			value: txValue,
 			gasLimit: "0x5208", // 21,000
-			gasPrice: "0xEE6B2800", // 4 gwei
+			gasPrice: gasPrice || "0xEE6B2800", // 4 gwei
 			data: config.host.includes("localhost") === false ? txData : null
 		};
 
