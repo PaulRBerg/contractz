@@ -3,10 +3,6 @@ const config = require("./config");
 const web3 = require("./web3");
 
 module.exports = async (from, to, value = "0x0", gasLimit = "0x30D40", gasPrice = "0x2CB417800", data, chainId = "0x03") => {
-	// assert(from, 'From needs to be valid');
-	// assert(to, 'To needs to be valid');
-	// assert(data, 'Data needs to be valid');
-
 	const count = await web3.eth.getTransactionCount(from);
 	const nonce = web3.utils.toHex(count);
 

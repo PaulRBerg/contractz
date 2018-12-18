@@ -1,5 +1,5 @@
 const config = require("../config");
-const contract = require("../contract")("PaulCoin", config.contracts[0]);
+const contract = require("../contract")("PBToken", config.contracts[0]);
 const web3 = require("../web3");
 const Tx = require("../tx");
 
