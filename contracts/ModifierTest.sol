@@ -1,20 +1,20 @@
-pragma solidity ^0.4.24;
+pragma solidity ^0.5.0;
 
 contract ModifierTest {
 
-    address public owner;
+  address public owner;
 
-    struct myStruct {
-        uint256 fancyVar;
-    }
+  struct MyStruct {
+    uint256 fancyVar;
+  }
 
-    constructor() public {
-        owner = msg.sender;
-    }
+  constructor() public {
+    owner = msg.sender;
+  }
 
 //    modifier myFancyModifier {
 //        uint16 a = 314;
-//        myStruct memory b;
+//        MyStruct memory b;
 //        b.fancyVar = 159;
 //        _;
 //    }

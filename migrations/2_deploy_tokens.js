@@ -1,5 +1,5 @@
-const PBToken = artifacts.require("./PBToken.sol");
+const MyToken = artifacts.require("./MyToken.sol");
 
 module.exports = (deployer) => {
-	deployer.deploy(PBToken,);
+	deployer.deploy(MyToken);
 };

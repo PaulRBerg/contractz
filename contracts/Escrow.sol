@@ -1,60 +1,60 @@
-pragma solidity ^0.4.24;
+pragma solidity ^0.5.0;
 
 contract Ownable {
 
-    address public owner;
+  address payable public owner;
 
-    constructor() public {
-        owner = msg.sender;
-    }
+  constructor() public {
+    owner = msg.sender;
+  }
 
-    modifier onlyOwner() {
-        require(msg.sender == owner);
-        _;
-    }
+  modifier onlyOwner() {
+    require(msg.sender == owner);
+    _;
+  }
 }
 
 contract Destructible is Ownable {
 
-    constructor() public payable { }
+  constructor() public payable { }
 
-    function destroy() onlyOwner public {
-        selfdestruct(owner);
-    }
+  function destroy() public onlyOwner {
+    selfdestruct(owner);
+  }
 
-    function destroyAndSend(address _recipient) onlyOwner public {
-        selfdestruct(_recipient);
-    }
+  function destroyAndSend(address payable _recipient) public onlyOwner {
+    selfdestruct(_recipient);
+  }
 }
 
 contract Escrow is Destructible {
 
-    event LogReceivedFunds(address sender, uint amount);
-    event LogReturnedFunds(address recipient, uint amount);
+  event LogReceivedFunds(address sender, uint amount);
+  event LogReturnedFunds(address recipient, uint amount);
 
-    constructor() public { }
+  constructor() public { }
 
-    function() public payable {
-        emit LogReceivedFunds(msg.sender, msg.value);
+  function() external payable {
+    emit LogReceivedFunds(msg.sender, msg.value);
+  }
+
+  function getBalance() public view returns (uint256) {
+    return address(this).balance;
+  }
+
+  function refundBalance() public onlyOwner {
+    uint256 balance = address(this).balance;
+    emit LogReturnedFunds(msg.sender, balance);
+    msg.sender.transfer(balance);
+  }
+
+  function refundNada() public {
+    msg.sender.transfer(0);
+  }
+
+  function refundNadaRedundant() public {
+    if (false) {
+      msg.sender.transfer(0);
     }
-
-    function getBalance() public view returns (uint256) {
-        return address(this).balance;
-    }
-
-    function refundBalance() public onlyOwner {
-        uint256 balance = address(this).balance;
-        emit LogReturnedFunds(msg.sender, balance);
-        msg.sender.transfer(balance);
-    }
-
-    function refundNada() public {
-        msg.sender.transfer(0);
-    }
-
-    function refundNadaRedundant() public {
-        if (false) {
-            msg.sender.transfer(0);
-        }
-    }
+  }
 }

@@ -15,14 +15,24 @@
     "dotenv": "^6.2.0",
     "eslint": "^5.10.0",
     "ethereum-input-data-decoder": "0.0.12",
-    "openzeppelin-solidity": "2.0.0",
     "truffle": "^5.0.0-beta.2",
     "truffle-hdwallet-provider": "^1.0.0-web3one.1",
     "web3": "^1.0.0-beta.37",
     "web3-utils": "^1.0.0-beta.37"
   },
   "scripts": {
-    "lint": "eslint .",
+    "clean": "./node_modules/.bin/rimraf -rf ./coverage.json ./build ./coverage ./coverageEnv ./export",
+    "lint:js": "./node_modules/.bin/eslint .",
+    "lint:js:fix": "./node_modules/.bin/eslint . --fix",
+    "lint:sol": "./node_modules/.bin/solium -d .",
+    "lint:sol:fix": "./node_modules/.bin/solium -d . --fix",
+    "lint": "npm run lint:js && npm run lint:sol",
+    "lint:fix": "npm run lint:js:fix && npm run lint:sol:fix",
     "test": "./node_modules/.bin/truffle test"
+  },
+  "devDependencies": {
+    "openzeppelin-solidity": "^2.1.0-rc.2",
+    "rimraf": "^2.6.2",
+    "solium": "^1.2.0"
   }
 }

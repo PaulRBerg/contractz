@@ -1,11 +1,11 @@
-const PBToken = artifacts.require("PBToken");
+const MyToken = artifacts.require("MyToken");
 
-contract("PBToken", accounts => {
+contract("MyToken", accounts => {
 	const owner = accounts[0];
 	let token = {};
 
 	beforeEach(async () => {
-		token = await PBToken.new( { from: owner });
+		token = await MyToken.new( { from: owner });
 	});
 
 	it("has an owner and a total supply", async () => {

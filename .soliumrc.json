@@ -16,6 +16,6 @@
 
     "security/enforce-explicit-visibility": ["error"],
     "security/no-block-members": ["warning"],
-    "security/no-inline-assembly": ["warning"]
+    "security/no-inline-assembly": "off"
   }
 }
