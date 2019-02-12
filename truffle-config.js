@@ -3,35 +3,42 @@ dotenv.config();
 
 const HDWalletProvider = require("truffle-hdwallet-provider");
 
-const mnemonic = process.env.MNEMONIC;
-
-const testnet = (name, network_id, gas = 6999500) => {
-	return {
-		provider: () => {
-			return new HDWalletProvider(mnemonic, `https://${name}.infura.io/` + process.env.INFURA_API_KEY);
-		},
-		network_id: network_id,
-		gas: gas
-	};
+const createProvider = (network) => {
+  return () => {
+    return new HDWalletProvider(
+      process.env.MNEMONIC,
+      `https://${network}.infura.io/` + process.env.INFURA_API_KEY
+    );
+  };
 };
 
 module.exports = {
-	compilers: {
-		solc: {
-			optimizer: {
-				enabled: true,
-				runs: 200,
-			},
-			version: "0.5.0",
-		},
-	},
-	networks: {
-		local: {
-			host: "127.0.0.1",
-			port: 8545,
-			network_id: 7923
-		},
-		kovan: testnet("kovan", 42),
-		rinkeby: testnet("rinkeby", 4),
-	},
+  compilers: {
+    solc: {
+      version: "0.5.2",
+      settings: {
+        optimizer: {
+          enabled: false,
+          runs: 200
+        }
+      }
+    }
+  },
+  networks: {
+    development: {
+      host: "127.0.0.1",
+      network_id: 1234,
+      port: 8545,
+    },
+    kovan: {
+      provider: createProvider("kovan"),
+      gas: 4700000,
+      network_id: 42 // eslint-disable-line camelcase
+    },
+    rinkeby: {
+      provider: createProvider("rinkeby"),
+      gas: 4700000,
+      network_id: 4 // eslint-disable-line camelcase
+    }
+  },
 };

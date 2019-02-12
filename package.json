@@ -1,16 +1,8 @@
 {
   "name": "contractz",
+  "description": "Paul Berg's Ethereum contracts",
   "version": "0.1.0",
   "author": "Paul Berg",
-  "description": "Paul Berg's Ethereum contracts",
-  "license": "ISC",
-  "keywords": [
-    "ethereum",
-    "contracts",
-    "smart contracts",
-    "tokens",
-    "dapp"
-  ],
   "dependencies": {
     "dotenv": "^6.2.0",
     "eslint": "^5.10.0",
@@ -20,19 +12,27 @@
     "web3": "^1.0.0-beta.37",
     "web3-utils": "^1.0.0-beta.37"
   },
-  "scripts": {
-    "clean": "./node_modules/.bin/rimraf -rf ./coverage.json ./build ./coverage ./coverageEnv ./export",
-    "lint:js": "./node_modules/.bin/eslint .",
-    "lint:js:fix": "./node_modules/.bin/eslint . --fix",
-    "lint:sol": "./node_modules/.bin/solium -d .",
-    "lint:sol:fix": "./node_modules/.bin/solium -d . --fix",
-    "lint": "npm run lint:js && npm run lint:sol",
-    "lint:fix": "npm run lint:js:fix && npm run lint:sol:fix",
-    "test": "./node_modules/.bin/truffle test"
-  },
   "devDependencies": {
     "openzeppelin-solidity": "^2.1.0-rc.2",
     "rimraf": "^2.6.2",
     "solium": "^1.2.0"
+  },
+  "keywords": [
+    "contracts",
+    "dapp",
+    "ethereum",
+    "smart contracts",
+    "tokens"
+  ],
+  "license": "ISC",
+  "scripts": {
+    "clean": "./node_modules/.bin/rimraf -rf ./coverage.json ./build ./coverage ./coverageEnv ./export",
+    "lint": "npm run lint:js && npm run lint:sol",
+    "lint:fix": "npm run lint:js:fix && npm run lint:sol:fix",
+    "lint:js": "./node_modules/.bin/eslint .",
+    "lint:js:fix": "./node_modules/.bin/eslint . --fix",
+    "lint:sol": "./node_modules/.bin/solium -d .",
+    "lint:sol:fix": "./node_modules/.bin/solium -d . --fix",
+    "test": "./node_modules/.bin/truffle test"
   }
 }
