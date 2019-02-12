@@ -15,7 +15,7 @@
   "devDependencies": {
     "openzeppelin-solidity": "^2.1.0-rc.2",
     "rimraf": "^2.6.2",
-    "solium": "^1.2.0"
+    "solhint": "^1.5.1"
   },
   "keywords": [
     "contracts",
@@ -28,11 +28,9 @@
   "scripts": {
     "clean": "./node_modules/.bin/rimraf -rf ./coverage.json ./build ./coverage ./coverageEnv ./export",
     "lint": "npm run lint:js && npm run lint:sol",
-    "lint:fix": "npm run lint:js:fix && npm run lint:sol:fix",
     "lint:js": "./node_modules/.bin/eslint .",
     "lint:js:fix": "./node_modules/.bin/eslint . --fix",
-    "lint:sol": "./node_modules/.bin/solium -d .",
-    "lint:sol:fix": "./node_modules/.bin/solium -d . --fix",
+    "lint:sol": "./node_modules/.bin/solhint --config ./.solhint.json --max-warnings 0 \"contracts/**/*.sol\"",
     "test": "./node_modules/.bin/truffle test"
   }
 }
