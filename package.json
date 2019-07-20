@@ -37,7 +37,6 @@
     "lint:js": "eslint --ignore-path ../../.eslintignore .",
     "lint:sol": "solhint --config ./.solhint.json --max-warnings 0 \"contracts/**/*.sol\"",
     "prettier": "prettier --config .prettierrc --write '**/*.{js,json,md,sol}'",
-    "prettier:ci": "prettier --config .prettierrc --list-different '**/*.{js,json,md,sol}'",
     "test": "truffle test"
   }
 }
