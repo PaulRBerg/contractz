@@ -1,21 +1,27 @@
 {
   "name": "contractz",
   "description": "Paul Berg's Ethereum contracts",
-  "version": "0.1.0",
-  "author": "Paul Berg",
+  "version": "0.0.1",
+  "author": {
+    "name": "Paul Berg",
+    "url": "https://paulrberg.com"
+  },
   "dependencies": {
-    "dotenv": "^6.2.0",
-    "eslint": "^5.10.0",
-    "ethereum-input-data-decoder": "0.0.12",
-    "truffle": "^5.0.0-beta.2",
-    "truffle-hdwallet-provider": "^1.0.0-web3one.1",
-    "web3": "^1.0.0-beta.37",
-    "web3-utils": "^1.0.0-beta.37"
+    "openzeppelin-solidity": "2.3.0"
   },
   "devDependencies": {
-    "openzeppelin-solidity": "^2.1.0-rc.2",
-    "rimraf": "^2.6.2",
-    "solhint": "^1.5.1"
+    "dotenv": "^8.0.0",
+    "eslint": "^6.0.1",
+    "ethereum-input-data-decoder": "0.0.12",
+    "prettier": "^1.18.2",
+    "prettier-plugin-solidity": "^1.0.0-alpha.27",
+    "shx": "^0.3.2",
+    "solc": "0.5.10",
+    "solhint": "^2.1.2",
+    "truffle": "^5.0.28",
+    "truffle-hdwallet-provider": "^1.0.14",
+    "web3": "1.0.0-beta.55",
+    "web3-utils": "1.0.0-beta.55"
   },
   "keywords": [
     "contracts",
@@ -24,13 +30,14 @@
     "smart contracts",
     "tokens"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "scripts": {
-    "clean": "./node_modules/.bin/rimraf -rf ./coverage.json ./build ./coverage ./coverageEnv ./export",
-    "lint": "npm run lint:js && npm run lint:sol",
-    "lint:js": "./node_modules/.bin/eslint .",
-    "lint:js:fix": "./node_modules/.bin/eslint . --fix",
-    "lint:sol": "./node_modules/.bin/solhint --config ./.solhint.json --max-warnings 0 \"contracts/**/*.sol\"",
-    "test": "./node_modules/.bin/truffle test"
+    "clean": "shx rm -rf ./build ./export",
+    "lint": "yarn lint:js && yarn lint:sol",
+    "lint:js": "eslint --ignore-path ../../.eslintignore .",
+    "lint:sol": "solhint --config ./.solhint.json --max-warnings 0 \"contracts/**/*.sol\"",
+    "prettier": "prettier --config .prettierrc --write '**/*.{js,json,md,sol}'",
+    "prettier:ci": "prettier --config .prettierrc --list-different '**/*.{js,json,md,sol}'",
+    "test": "truffle test"
   }
 }

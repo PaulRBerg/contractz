@@ -1,12 +1,11 @@
-pragma solidity ^0.5.0;
+pragma solidity 0.5.10;
 
 contract LoseYourEth {
+    uint256 public redundantInt;
 
-  uint256 public redundantInt;
+    constructor() public {
+        redundantInt = 73;
+    }
 
-  constructor() public {
-    redundantInt = 73;
-  }
-
-  function() external payable {}
+    function() external payable {}
 }

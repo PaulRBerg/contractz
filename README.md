@@ -1,2 +1,3 @@
 ## Contractz
-Paul Berg's Ethereum contracts.
+
+Scratch pad for my personal smart contracts.

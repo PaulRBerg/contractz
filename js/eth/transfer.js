@@ -21,7 +21,7 @@ const main = async () => {
       value: txValue,
       gasLimit: "0x5208", // 21,000
       gasPrice: gasPrice || "0xEE6B2800", // 4 gwei
-      data: config.host.includes("localhost") === false ? txData : null
+      data: config.host.includes("localhost") === false ? txData : null,
     };
 
     const privateKey = Buffer.from(config.private, "hex");

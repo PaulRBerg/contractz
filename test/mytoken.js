@@ -1,11 +1,12 @@
+/* global assert, artifacts, contracts, describe, it */
 const MyToken = artifacts.require("MyToken");
 
-contract("MyToken", accounts => {
+contract("MyToken", (accounts) => {
   const owner = accounts[0];
   let token = {};
 
   beforeEach(async () => {
-    token = await MyToken.new( { from: owner });
+    token = await MyToken.new({from: owner});
   });
 
   it("has an owner and a total supply", async () => {
@@ -16,13 +17,12 @@ contract("MyToken", accounts => {
     assert.equal(totalSupply, web3.utils.toWei("10000"));
   });
 
-  it("allows token transfers", async function () {
+  it("allows token transfers", async function() {
     const owner = accounts[0];
     const recipient = accounts[1];
-    await token.transfer(recipient, web3.utils.toWei("100"), { from: owner });
+    await token.transfer(recipient, web3.utils.toWei("100"), {from: owner});
 
     const ownerBalance = await token.contract.methods.balanceOf(owner).call();
-    console.log("ownerBalance", ownerBalance);
     assert.equal(ownerBalance, web3.utils.toWei("9900"));
 
     const recipientBalance = await token.contract.methods.balanceOf(recipient).call();

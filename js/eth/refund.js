@@ -12,7 +12,7 @@ const main = async () => {
       "0x0",
       "0xD6D8", // 55,000
       "0x2CB417800", // 12 gwei
-      contract.methods.refundBalance().encodeABI()
+      contract.methods.refundBalance().encodeABI(),
     );
     const receipt = await web3.eth.sendSignedTransaction("0x" + tx.toString("hex"));
     console.log(`Receipt info:  ${JSON.stringify(receipt, null, "\t")}`);
