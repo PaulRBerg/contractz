@@ -10,6 +10,7 @@
     "openzeppelin-solidity": "2.3.0"
   },
   "devDependencies": {
+    "@truffle/hdwallet-provider": "^1.0.18",
     "dotenv": "^8.0.0",
     "eslint": "^6.0.1",
     "ethereum-input-data-decoder": "0.0.12",
@@ -19,7 +20,6 @@
     "solc": "0.5.10",
     "solhint": "^2.1.2",
     "truffle": "^5.0.28",
-    "truffle-hdwallet-provider": "^1.0.14",
     "web3": "1.0.0-beta.55",
     "web3-utils": "1.0.0-beta.55"
   },
