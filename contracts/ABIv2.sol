@@ -1,4 +1,4 @@
-pragma solidity 0.5.10;
+pragma solidity 0.5.11;
 
 // Enable the ABI v2 Coder
 // solium-disable-next-line no-experimental

@@ -10,10 +10,10 @@ const createProvider = (network) => {
 module.exports = {
   compilers: {
     solc: {
-      version: "0.5.10",
+      version: "0.5.11",
       settings: {
         optimizer: {
-          enabled: false,
+          enabled: true,
           runs: 200,
         },
       },
