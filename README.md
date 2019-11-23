@@ -1,3 +1,3 @@
 ## Contractz
 
-Scratch pad for my personal smart contracts.
+Sketchbook for my personal Ethereum smart contracts.
