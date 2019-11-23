@@ -1,29 +1,31 @@
 {
-  "name": "contractz",
-  "description": "Paul Berg's Ethereum contracts",
+  "name": "@paulrberg/contractz",
+  "description": "Sketchbook for my personal Ethereum smart contracts",
   "version": "0.0.1",
   "author": {
-    "name": "Paul Berg",
+    "name": "Paul Razvan Berg",
     "url": "https://paulrberg.com"
   },
   "dependencies": {
-    "openzeppelin-solidity": "2.3.0"
+    "@openzeppelin/contracts": "2.4.0"
   },
   "devDependencies": {
-    "@truffle/hdwallet-provider": "^1.0.18",
-    "dotenv": "^8.0.0",
-    "eslint": "^6.0.1",
-    "ethereum-input-data-decoder": "0.0.12",
-    "prettier": "^1.18.2",
-    "prettier-plugin-solidity": "^1.0.0-alpha.27",
+    "@paulrberg/eslint-config": "^1.0.0",
+    "@truffle/hdwallet-provider": "^1.0.26",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.7.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "prettier": "^1.19.1",
+    "prettier-plugin-solidity": "^1.0.0-alpha.34",
     "shx": "^0.3.2",
-    "solc": "0.5.10",
-    "solhint": "^2.1.2",
-    "truffle": "^5.0.28",
-    "web3": "1.0.0-beta.55",
-    "web3-utils": "1.0.0-beta.55"
+    "solc": "0.5.11",
+    "solhint": "^2.3.0",
+    "truffle": "^5.1.1",
+    "web3": "^1.2.4"
   },
   "keywords": [
+    "blockchain",
     "contracts",
     "dapp",
     "ethereum",
@@ -32,9 +34,9 @@
   ],
   "license": "MIT",
   "scripts": {
-    "clean": "shx rm -rf ./build ./export",
+    "clean": "shx rm -rf ./build",
     "lint": "yarn lint:js && yarn lint:sol",
-    "lint:js": "eslint --ignore-path ../../.eslintignore .",
+    "lint:js": "eslint --ignore-path ./.eslintignore .",
     "lint:sol": "solhint --config ./.solhint.json --max-warnings 0 \"contracts/**/*.sol\"",
     "prettier": "prettier --config .prettierrc --write '**/*.{js,json,md,sol}'",
     "test": "truffle test"
