@@ -1,5 +1,5 @@
-const MyToken = artifacts.require("./MyToken.sol");
+const TestnetDAI = artifacts.require("./TestnetDAI.sol");
 
 module.exports = (deployer) => {
-  deployer.deploy(MyToken);
+  deployer.deploy(TestnetDAI);
 };
