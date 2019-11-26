@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 contract Batch is Ownable {
     using SafeMath for uint256;
 
-    address public constant daiContractAddress = 0x89d24A6b4CcB1B6fAA2625fE562bDD9a23260359;
+    address public constant daiContractAddress = 0x6B175474E89094C44Da98b954EedeAC495271d0F;
     uint256 public constant daiGift = 1000000000000000000;
     uint256 public constant ethGift = 5500000000000000;
     uint256 public constant size = 80;
