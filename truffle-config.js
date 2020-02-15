@@ -1,6 +1,6 @@
 require("dotenv").config();
 const HDWalletProvider = require("@truffle/hdwallet-provider");
-const {toHex, toWei} = require("web3-utils");
+const {ethers} = require("ethers");
 
 /**
  * @dev You must create a `.env` file by following `.env.example`.
@@ -42,31 +42,38 @@ module.exports = {
   networks: {
     development: {
       host: "127.0.0.1",
-      gas: "6000000",
-      gasPrice: toHex(toWei("1", "gwei")),
+      gas: 6e6,
+      gasPrice: ethers.utils.parseUnits("1", "gwei").toString(),
       network_id: "*",
       port: "8545",
       skipDryRun: true,
     },
+    goerli: {
+      provider: createProvider("goerli"),
+      gas: 6e6,
+      gasPrice: ethers.utils.parseUnits("10", "gwei").toString(),
+      network_id: 42,
+      skipDryRun: true,
+    },
     kovan: {
       provider: createProvider("kovan"),
-      gas: "6000000",
-      gasPrice: toHex(toWei("10", "gwei")),
-      network_id: "42",
+      gas: 6e6,
+      gasPrice: ethers.utils.parseUnits("10", "gwei").toString(),
+      network_id: 42,
       skipDryRun: true,
     },
     rinkeby: {
       provider: createProvider("rinkeby"),
-      gas: "6000000",
-      gasPrice: toHex(toWei("10", "gwei")),
-      network_id: "4",
+      gas: 6e6,
+      gasPrice: ethers.utils.parseUnits("10", "gwei").toString(),
+      network_id: 4,
       skipDryRun: true,
     },
     ropsten: {
       provider: createProvider("ropsten"),
-      gas: "6000000",
-      gasPrice: toHex(toWei("10", "gwei")),
-      network_id: "3",
+      gas: 6e6,
+      gasPrice: ethers.utils.parseUnits("10", "gwei").toString(),
+      network_id: 3,
       skipDryRun: true,
     },
   },
